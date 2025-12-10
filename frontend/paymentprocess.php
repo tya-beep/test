@@ -2,7 +2,8 @@
 $data = include "../backend/paymentprocess_controller.php";
 
 if ($data["success"]) {
-    header("Location: receipt.php?paymentID=" . $data["paymentID"]);
+    // Redirect using receiptID
+    header("Location: receipt.php?receiptID=" . $data["receiptID"]);
     exit();
 }
 
@@ -26,9 +27,8 @@ $error = $data["error"];
     </div>
 <?php endif; ?>
 
-<a href="viewpaymentstatusowner.php" 
-   class="px-4 py-2 bg-blue-600 text-white rounded">
-   Go Back
+<a href="viewpaymentstatusowner.php" class="px-4 py-2 bg-blue-600 text-white rounded">
+    Go Back
 </a>
 
 </body>
