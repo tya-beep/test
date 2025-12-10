@@ -46,7 +46,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="home.php" class="active">Home</a></li>
-          <li><a href="about.html">Our Services</a></li>
+          <li><a href="../frontend/service.php">Our Services</a></li>
           <li><a href="departments.html">About Us</a></li>
       </nav>
 
