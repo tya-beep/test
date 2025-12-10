@@ -15,7 +15,18 @@ $payments = include "../backend/paymentstatusowner_controller.php";
 <div class="max-w-3xl mx-auto"> <!-- Center & reduce width -->
 
     <h1 class="text-3xl font-bold mb-8 text-center mt-24">Your Payment</h1>
-
+<!-- SEARCH FORM -->
+<form method="GET" class="max-w-3xl mx-auto mb-6">
+    <div class="flex">
+        <input type="text" name="search" placeholder="Search payments..."
+               value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>"
+               class="flex-grow p-2 border border-gray-400 rounded-l">
+        <button type="submit"
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 rounded-r">
+            Search
+        </button>
+    </div>
+</form>
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white border shadow-md rounded-lg">
             <thead class="bg-gray-200">
@@ -61,6 +72,6 @@ $payments = include "../backend/paymentstatusowner_controller.php";
     </div>
 
 </div> <!-- end centered container -->
-
+<?php include "../frontend/footer.php"; ?>
 </body>
 </html>

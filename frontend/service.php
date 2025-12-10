@@ -99,5 +99,7 @@ include "../frontend/header.php";
 
 <script src="../MediTrust/assets/js/main.js"></script>
 
+<?php include "../frontend/footer.php"; ?>
+
 </body>
 </html>

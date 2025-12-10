@@ -14,6 +14,18 @@ $payments = include "../backend/paymenthistory_controller.php";
 <body class="p-10 bg-gray-50">
 
 <h1 class="text-3xl font-bold mb-6 text-center mt-24">Payment History</h1>
+<!-- SEARCH FORM -->
+<form method="GET" class="max-w-3xl mx-auto mb-6">
+    <div class="flex">
+        <input type="text" name="search" placeholder="Search payments..."
+               value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>"
+               class="flex-grow p-2 border border-gray-400 rounded-l">
+        <button type="submit"
+                class="bg-blue-500 hover:bg-blue-600 text-white px-4 rounded-r">
+            Search
+        </button>
+    </div>
+</form>
 
 <div class="max-w-3xl mx-auto">
     <div class="overflow-x-auto">
@@ -59,6 +71,6 @@ $payments = include "../backend/paymenthistory_controller.php";
         </table>
     </div>
 </div>
-
+<?php include "../frontend/footer.php"; ?>
 </body>
 </html>

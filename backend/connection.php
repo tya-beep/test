@@ -14,4 +14,17 @@ try {
     die("MySQL Connection failed: " . $e->getMessage());
 }
 
+// PostgreSQL connection (for login accounts)
+$pg_host = '10.48.74.199';
+$pg_db   = 'postgres';     // your PostgreSQL DB name
+$pg_user = 'postgres';      // or your PG user
+$pg_pass = 'password';
+
+try {
+    $connPG = new PDO("pgsql:host=$pg_host;dbname=$pg_db", $pg_user, $pg_pass);
+    $connPG->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    die("PostgreSQL Connection failed: " . $e->getMessage());
+}
+
 ?>
